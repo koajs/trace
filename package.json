@@ -1,0 +1,26 @@
+{
+  "name": "koa-trace",
+  "description": "generic tracing for koa",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "twitter": "https://twitter.com/jongleberry"
+  },
+  "license": "MIT",
+  "repository": "koajs/trace",
+  "dependencies": {
+    "debug": "*"
+  },
+  "devDependencies": {
+    "mz": "1",
+    "koa": "*",
+    "mocha": "1",
+    "bluebird": "2"
+  },
+  "scripts": {
+    "start": "DEBUG=koa-trace:* node --harmony-generators example.js",
+    "test": "mocha --reporter spec --bail"
+  }
+}
