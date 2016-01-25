@@ -17,7 +17,7 @@
     "mz": "1",
     "koa": "*",
     "mocha": "1",
-    "bluebird": "2"
+    "bluebird": "3.1.2"
   },
   "scripts": {
     "start": "DEBUG=koa-trace:* node --harmony-generators example.js",
