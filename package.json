@@ -14,7 +14,7 @@
     "debug": "*"
   },
   "devDependencies": {
-    "mz": "1",
+    "mz": "2.2.0",
     "koa": "*",
     "mocha": "1",
     "bluebird": "2"
