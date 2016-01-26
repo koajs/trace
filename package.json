@@ -16,7 +16,7 @@
   "devDependencies": {
     "mz": "1",
     "koa": "*",
-    "mocha": "1",
+    "mocha": "2.4.1",
     "bluebird": "2"
   },
   "scripts": {
