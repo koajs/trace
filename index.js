@@ -28,7 +28,6 @@ module.exports = function (app) {
     var Debug = require('debug')
 
     app.instrument(function (context, event, date, args) {
-      debugger;
       var id = context.id
       if (!id) throw new Error('you need to set `this.id` to debug')
       if (Buffer.isBuffer(id)) id = id.toString('base64')
