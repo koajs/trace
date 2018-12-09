@@ -11,13 +11,12 @@
   "license": "MIT",
   "repository": "koajs/trace",
   "dependencies": {
-    "debug": "*"
+    "debug": "^4.1.0"
   },
   "devDependencies": {
-    "mz": "1",
     "koa": "*",
-    "mocha": "1",
-    "bluebird": "2"
+    "mocha": "^5.2.0",
+    "mz": "1"
   },
   "scripts": {
     "start": "DEBUG=koa-trace:* node --harmony-generators example.js",
