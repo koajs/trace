@@ -19,7 +19,7 @@
     "mz": "1"
   },
   "scripts": {
-    "start": "DEBUG=koa-trace:* node --harmony-generators example.js",
+    "start": "DEBUG=koa-trace:* node example.js",
     "test": "mocha --reporter spec --bail"
   }
 }
