@@ -8,14 +8,14 @@ like jstrace, dtrace, ktap, statds, etc.
 [debug](http://github.com/visionmedia/debug) also supported!
 
 ```js
-app.use(function* (next) {
+app.use(async function (ctx, next) {
   // give each request some sort of ID
-  this.id = crypto.randomBytes(12)
+  ctx.id = crypto.randomBytes(12)
 
   // log events with optional arguments
-  this.trace('start')
-  yield* next
-  this.trace('finish')
+  ctx.trace('start')
+  await next()
+  ctx.trace('finish')
 })
 ```
 
@@ -66,7 +66,8 @@ We can start a doc or wiki or something.
 Add the instrumentation methods to `app`.
 
 ```js
-var app = koa()
+const Koa = require('koa')
+const app = new Koa()
 require('koa-trace')(app)
 ```
 
@@ -75,9 +76,9 @@ require('koa-trace')(app)
 Emit an `event` with optional arguments.
 
 ```js
-app.use(function* (next) {
-  this.trace('something', 1, 2, 3)
-  yield* next
+app.use(async function (ctx, next) {
+  ctx.trace('something', 1, 2, 3)
+  await next()
 })
 ```
 
